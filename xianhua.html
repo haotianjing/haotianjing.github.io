@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>闲话 · Haotian Jing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+    body, td, th {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #333333;
+      line-height: 1.5;
+    }
+
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus, a:hover {
+      color: #f09228;
+      text-decoration: underline;
+    }
+
+    .pageheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .sectionheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #222222;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .heading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    strong {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .nav-back {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .page-desc {
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 28px;
+    }
+
+    /* 时间线 */
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0 0 0 28px;
+      list-style: none;
+      border-left: 2px solid #e5e5e5;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+      padding-bottom: 4px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -35px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #1772d0;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #ddd;
+    }
+
+    .timeline-date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    .timeline-type {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #666;
+      margin-left: 8px;
+    }
+
+    .timeline-body {
+      margin: 6px 0 0;
+    }
+
+    .timeline-body p {
+      margin: 0 0 8px;
+    }
+
+    .timeline-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-links {
+      margin-top: 6px;
+    }
+
+    .timeline-comment {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-left: 3px solid #ddd;
+      background: #fafafa;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .timeline-comment .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 650px) {
+      .timeline {
+        padding-left: 22px;
+      }
+      .timeline-item::before {
+        left: -29px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav-back"><a href="index.html">← 返回首页</a></div>
+
+    <div class="pageheading">闲话</div>
+    <p class="page-desc">随手记下的文字、视频、文章与读后感。</p>
+
+    <div class="sectionheading">时间线</div>
+
+    <ul class="timeline">
+
+      <!-- 文本 -->
+      <li class="timeline-item">
+        <div class="timeline-date">2026年06月<span class="timeline-type"></span></div>
+        <div class="timeline-body">
+          <p>毕业了。</p>
+          <p>在长沙度过了快乐充实的四年本科时光。</p>
+        </div>
+      </li>
+
+    </ul>
+
+    <div style="border-top: 1px solid #ddd; margin-top: 40px; padding-top: 15px; font-size: 14px; color: #777; text-align: center;">
+      做时间的朋友
+    </div>
+  </div>
+
+</body>
+</html>

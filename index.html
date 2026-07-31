@@ -1,4 +1,358 @@
-我的个人网站
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haotian Jing</title>
+  
+  <!-- 引入谷歌字体 Titillium Web -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap" rel="stylesheet" type="text/css">
+  
+  <style type="text/css">
+    /* 参照原网站 CSS 核心样式设置 */
+    body, td, th {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #333333;
+      line-height: 1.5;
+    }
 
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
 
-    Hello, World! 欢迎来到我的个人主页
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus, a:hover {
+      color: #f09228;
+      text-decoration: underline;
+    }
+
+    /* 标题与文字层级样式 */
+    .pageheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .sectionheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #222222;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .subsectionheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333333;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .heading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 200px;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      line-height: 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      flex-shrink: 0;
+      display: block;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    strong {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    strongred {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: red;
+    }
+
+    /* 页面容器布局 */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* 顶部个人信息区域（左右双栏） */
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .profile-bio {
+      vertical-align: top;
+      padding-right: 20px;
+    }
+
+    .profile-photo {
+      vertical-align: top;
+      width: 220px;
+      text-align: center;
+    }
+
+    .profile-photo img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* 内容项目列表卡片/表格 */
+    .item-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .item-media {
+      width: 220px;
+      vertical-align: top;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    .item-media img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .item-content {
+      vertical-align: top;
+      padding-bottom: 20px;
+    }
+
+    /* 响应式支持：手机端自动变为单栏 */
+    @media (max-width: 650px) {
+      .profile-table, .item-table, .profile-table tbody, .profile-table tr, .profile-table td,
+      .item-table tbody, .item-table tr, .item-table td {
+        display: block;
+        width: 100%;
+      }
+      .profile-photo, .item-media {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+      .item-media img,
+      .carousel {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .profile-bio {
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- 个人头图与简介部分 -->
+    <table class="profile-table">
+      <tbody>
+        <tr>
+          <td class="profile-bio">
+            <div class="pageheading">「敬淏天」</div>
+            <p>
+              我是<a href="https://www.gxu.edu.cn/" target="_blank">广西大学</a>在读2026级人工智能专业研究生，硕士研究方向为生物信息学。
+            </p>
+            <p>
+             本科毕业于<a href="http://www.ccsu.edu.cn/" target="_blank">长沙学院</a>物联网工程专业，本科期间加入计算机网络优化实验室，研究方向为计算机网络的拥塞控制和负载均衡。
+            </p>
+            <a href="xianhua.html">闲话</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 新闻 / 动态板块 -->
+    <div class="sectionheading">最新动态 (News)</div>
+    <ul>
+      <li><strong>2026年06月:</strong> 本科毕业并获得学士学位。</li>
+      <li><strong>2026年04月:</strong> 以专业第一名的成绩考入广西大学人工智能专业。</li>
+    </ul>
+
+    <!-- 代表性学术成果 / 项目展示 -->
+    <div class="sectionheading">研究成果 (Research &amp; Projects)</div>
+
+    <div class="subsectionheading">硕士阶段</div>
+    <table class="item-table">
+      <tbody>
+        <tr>
+          <td class="item-media">
+          </td>
+          <td class="item-content">暂无</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="subsectionheading">本科阶段</div>
+
+    <!-- 本科成果 1：FGCS -->
+    <table class="item-table">
+      <tbody>
+        <tr>
+          <td class="item-media">
+            <img src="images/fgcs.jpg" alt="FGCS 论文首页">
+          </td>
+          <td class="item-content">
+            <div class="heading">
+              <a href="https://doi.org/10.1016/j.future.2025.107972" target="_blank">Balancing data center traffic load with speeding up flow-transmission</a>
+            </div>
+            <div><em>Future Generation Computer Systems</em>, 2026（中科院一区 TOP）</div>
+            <p>
+              在中科院一区 TOP 期刊《Future Generation Computer Systems》发表论文《Balancing data center traffic load with speeding up flow-transmission》。
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 本科成果 2：IEEE TSC -->
+    <table class="item-table">
+      <tbody>
+        <tr>
+          <td class="item-media">
+            <img src="images/tsc-r3.jpg" alt="IEEE TSC 论文首页">
+          </td>
+          <td class="item-content">
+            <div class="heading">
+              <a href="https://doi.org/10.1109/TSC.2025.3603578" target="_blank"><i>R</i><sup>3</sup>: A Building Block for Disordering-Tolerant Load Balancing in Data Center Networks</a>
+            </div>
+            <div><em>IEEE Transactions on Services Computing</em>, 2025（CCF-A）</div>
+            <p>
+              作为合作作者，在 CCF（中国计算机学会）推荐的 CCF-A 类期刊《IEEE Transactions on Services Computing》上发表论文《<i>R</i><sup>3</sup>: A Building Block for Disordering-Tolerant Load Balancing in Data Center Networks》。
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 本科成果 3：IEEE ISPA 2024 -->
+    <table class="item-table">
+      <tbody>
+        <tr>
+          <td class="item-media">
+            <div class="carousel" data-interval="3500">
+              <div class="carousel-track">
+                <img src="images/ispa.jpg" alt="IEEE ISPA 2024 论文首页">
+                <img src="images/ispa-meeting.jpg" alt="IEEE ISPA 2024 与会照片">
+              </div>
+            </div>
+          </td>
+          <td class="item-content">
+            <div class="heading">
+              <a href="https://doi.org/10.1109/ISPA63168.2024.00139" target="_blank">Leveraging Packet Cloning to Achieve Fast Flow-Transmission for Data Center Load Balancing</a>
+            </div>
+            <div><em>2024 IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA)</em>（CCF-C）</div>
+            <p>
+              以第三作者身份在 CCF-C 类国际会议 IEEE-ISPA 2024 发表论文《Leveraging Packet Cloning to Achieve Fast Flow-Transmission for Data Center Load Balancing》，并赴开封主会场完成学术交流。
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 页脚 -->
+    <div style="border-top: 1px solid #ddd; margin-top: 40px; padding-top: 15px; font-size: 14px; color: #777; text-align: center;">
+      做时间的朋友
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.carousel').forEach(function (carousel) {
+        var track = carousel.querySelector('.carousel-track');
+        var slides = track.querySelectorAll('img');
+        var index = 0;
+        var interval = parseInt(carousel.getAttribute('data-interval'), 10) || 3500;
+        var timer;
+
+        function lockHeight() {
+          var h = slides[0].offsetHeight;
+          if (!h) return;
+          slides.forEach(function (img) {
+            img.style.height = h + 'px';
+            img.style.objectFit = 'cover';
+          });
+        }
+
+        function goTo(i) {
+          index = (i + slides.length) % slides.length;
+          track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        }
+
+        function next() {
+          goTo(index + 1);
+        }
+
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(next, interval);
+        }
+
+        carousel.addEventListener('mouseenter', function () {
+          clearInterval(timer);
+        });
+        carousel.addEventListener('mouseleave', restart);
+
+        if (slides[0].complete) {
+          lockHeight();
+        } else {
+          slides[0].addEventListener('load', lockHeight);
+        }
+
+        goTo(0);
+        restart();
+      });
+    })();
+  </script>
+
+</body>
+</html>
