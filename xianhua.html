@@ -143,6 +143,27 @@
       margin-top: 6px;
     }
 
+    .timeline-images {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .timeline-images a img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      display: block;
+      background: #f5f5f5;
+    }
+
+    .timeline-images a:hover img {
+      border-color: #1772d0;
+    }
+
     .timeline-comment {
       margin-top: 10px;
       padding: 10px 12px;
@@ -166,6 +187,37 @@
       .timeline-item::before {
         left: -29px;
       }
+      .timeline-images a img {
+        width: 130px;
+        height: 100px;
+      }
+    }
+
+    /* 大图灯箱 */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      border-radius: 4px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+      cursor: zoom-out;
     }
   </style>
 </head>
@@ -181,6 +233,13 @@
 
     <ul class="timeline">
 
+      <li class="timeline-item">
+        <div class="timeline-date">2026年6月9日</div>
+        <div class="timeline-body">
+          <p>离开长沙，回西安。</p>
+        </div>
+      </li>
+
       <!-- 文本 -->
       <li class="timeline-item">
         <div class="timeline-date">2026年06月<span class="timeline-type"></span></div>
@@ -190,12 +249,177 @@
         </div>
       </li>
 
+      <li class="timeline-item">
+        <div class="timeline-date">2026年5月29日</div>
+        <div class="timeline-body">
+          <p>拍毕业照。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年4月27日</div>
+        <div class="timeline-body">
+          <p>武汉旅行。</p>
+          <div class="timeline-images">
+            <a href="images/2026-04-27_武汉.jpg"><img src="images/2026-04-27_武汉.jpg" alt="武汉" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年4月1日</div>
+        <div class="timeline-body">
+          <p>重庆旅行。</p>
+          <div class="timeline-images">
+            <a href="images/2026-04-01_重庆_01.jpg"><img src="images/2026-04-01_重庆_01.jpg" alt="重庆 01" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年3月31日</div>
+        <div class="timeline-body">
+          <p>在贵阳黔灵山看到孔雀开屏时查到复试成绩，复试第一名，总成绩第一名！🥇</p>
+          <div class="timeline-images">
+            <a href="images/2026-03-31_贵阳_01.jpg"><img src="images/2026-03-31_贵阳_01.jpg" alt="贵阳 01" loading="lazy"></a>
+            <a href="images/2026-03-31_贵阳_02.jpg"><img src="images/2026-03-31_贵阳_02.jpg" alt="贵阳 02" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年3月29日</div>
+        <div class="timeline-body">
+          <p>贵阳旅行。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年3月25日</div>
+        <div class="timeline-body">
+          <p>到达南宁参加复试。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年3月3日</div>
+        <div class="timeline-body">
+          <p>准备复试。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2026年2月28日</div>
+        <div class="timeline-body">
+          <p>考研出分，初试第二名！</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2025年12月24日</div>
+        <div class="timeline-body">
+          <p>南昌旅游。</p>
+          <div class="timeline-images">
+            <a href="images/2025-12-24_南昌_01.jpg"><img src="images/2025-12-24_南昌_01.jpg" alt="南昌 01" loading="lazy"></a>
+            <a href="images/2025-12-24_南昌_02.jpg"><img src="images/2025-12-24_南昌_02.jpg" alt="南昌 02" loading="lazy"></a>
+            <a href="images/2025-12-24_南昌_03.jpg"><img src="images/2025-12-24_南昌_03.jpg" alt="南昌 03" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2025年12月20日</div>
+        <div class="timeline-body">
+          <p>全国硕士研究生统一招生考试。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2025年6月</div>
+        <div class="timeline-body">
+          <p>广西旅游，经柳州、北海。</p>
+          <div class="timeline-images">
+            <a href="images/2025-06-06_北海.jpg"><img src="images/2025-06-06_北海.jpg" alt="北海" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2025年2月17日</div>
+        <div class="timeline-body">
+          <p>开始准备考研。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2024年10月30日</div>
+        <div class="timeline-body">
+          <p>参加开封学术会议。</p>
+          <div class="timeline-images">
+            <a href="images/2024-10-30_开封_01.jpg"><img src="images/2024-10-30_开封_01.jpg" alt="开封学术会议 01" loading="lazy"></a>
+            <a href="images/2024-10-30_开封_02.jpg"><img src="images/2024-10-30_开封_02.jpg" alt="开封学术会议 02" loading="lazy"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2022年9月</div>
+        <div class="timeline-body">
+          <p>长沙，开始本科阶段。</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-date">2022年9月之前</div>
+        <div class="timeline-body">
+          <p>西安。</p>
+        </div>
+      </li>
+
     </ul>
 
     <div style="border-top: 1px solid #ddd; margin-top: 40px; padding-top: 15px; font-size: 14px; color: #777; text-align: center;">
       做时间的朋友
     </div>
   </div>
+
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="大图预览">
+  </div>
+
+  <script>
+    (function () {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.timeline-images a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          lightboxImg.src = link.getAttribute('href');
+          lightbox.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+      }
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox || e.target === lightboxImg) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
